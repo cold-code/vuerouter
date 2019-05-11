@@ -43,7 +43,8 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 （4）。接着cd xxx 到新建文件夹下，若该文件夹下没找到node_modules文件夹，运行下列命令安装依赖包 
 
-`npm install`  
+`npm install`   
+
 
 > Test Two  
 ----  
