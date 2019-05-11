@@ -24,6 +24,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ## 本项目主要用用于练习  
 
 > Test One
+----  
 
 ### 练习借助vue-cli初始化项目
 
@@ -45,6 +46,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 `npm install`  
 
 > Test Two  
+----  
 
 ### 练习把本地仓库与github上新建仓库关联
 
