@@ -126,4 +126,4 @@ git push -u origin master
   
 `{{$route.params.xx1}} {{$route.params.xx2}}`
   
-`# *注意 params.vue文件内的内容需用<div>包裹
+`# *注意 params.vue文件内的内容需用<div>包裹`
