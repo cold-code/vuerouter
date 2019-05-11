@@ -2,6 +2,8 @@
   <div id="app">
     <img src="./assets/logo.png">
     <router-view/>
+    <router-view name="left" style="float:left;width:50%;background:#ccc"/>
+    <router-view name="right" style="float:right;width:50%;background:#01b2b6"/>
   </div>
 </template>
 
