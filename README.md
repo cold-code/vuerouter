@@ -51,7 +51,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 ### 练习把本地仓库与github上新建仓库关联
 
-### 步骤  
+#### 步骤  
 
 （1）。在本地待提交仓库内运行下列命令  
 
@@ -67,7 +67,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 `git remote add origin git@github.com:name/xxx.git` 把两个仓库关联起来  
 
-（4）。配置不需要提交的文件，现今github一般都会有默认项，也可以去.gitignore文件检查下，修改配置也在这个文件夹内，具体格式范例如下  
+（4）。配置不需要提交的文件，现今github一般都会有默认项，也可以去.gitignore文件检查下，修改配置也在这个文件内，具体格式范例如下  
 
 ```
   #       --表示此为注释,将被Git忽略   
@@ -89,4 +89,41 @@ git commit -m 'xxx'
 
 # 提交到远程仓库,初次提交添加-u  
 git push -u origin master
+```  
+
+# 继续学习vue-router
+
+### 4.单页面多路由区域操作： 
+---
+（1）.src文件夹下App.vue文件内新增<router-view name="xxx" style="float:left;width:50%;background:#ccc"/>标签xxx为路由区域名字用以区分多个路由区域;  
+（2）.src=>router文件夹下index.js文件内进行修改，新增import xx form '@/components/xx'路径引入;  
+（3）.src=>router文件夹下index.js文件内进行修改，routes数组内新增路由对象，格式为下：  
 ```
+{
+      path: '/Coldcode',
+      name: 'HelloWorld',
+      components: {
+        default: HelloWorld,
+        xx1: Hi2,
+        xx2: Hi1,
+      }
+}
+```  
+（4）.src=>components文件夹下新增对应路由区域文件  
+
+### 5.利用url传递参数： 
+---
+（1）.src文件夹下App.vue文件内新增<router-link to="/params/xx1(\\d+)/xx2">标签,xx1、xx2均为传递的参数，其中对xx1进行了正则判断  
+（2）.src=>router文件夹下index.js文件内进行修改，新增import params form '@/components/params'路径引入;  
+（3）.src=>router文件夹下index.js文件内进行修改，routes数组内新增路由对象，格式为下：  
+```
+{
+    path: '/params/:newsId(\\d+)/:newsTitle',
+    component: params
+}
+``` 
+（4）.src=>components文件夹下新增params.vue文件   
+  
+`{{$route.params.xx1}} {{$route.params.xx2}}`
+  
+`# *注意 params.vue文件内的内容需用<div>包裹
